@@ -310,56 +310,70 @@ result.metrics.win_rate       <span class="cc"># → 0.54</span></pre>
           <p class="section-eyebrow">Technical stack</p>
           <h2 class="section-heading">What I<br /><em>work with</em></h2>
           <p class="skills-note">I prioritise depth over breadth — I'd rather know Python deeply than dabble in everything.</p>
+          <p class="skills-note" style="margin-top:12px; font-size:13px; color:var(--ink-muted);">Click any pill to see which projects use it.</p>
         </div>
         <div class="skills-right">
           <div class="skill-group reveal delay-1">
             <h3 class="sg-title">Languages</h3>
             <div class="sg-pills">
-              <span class="pill featured">Python</span>
-              <span class="pill">JavaScript</span>
-              <span class="pill">TypeScript</span>
-              <span class="pill">SQL</span>
-              <span class="pill">Java</span>
-              <span class="pill">VBA</span>
+              <button class="pill featured" data-skill="Python">Python</button>
+              <button class="pill" data-skill="JavaScript">JavaScript</button>
+              <button class="pill" data-skill="TypeScript">TypeScript</button>
+              <button class="pill" data-skill="SQL">SQL</button>
+              <button class="pill" data-skill="Java">Java</button>
+              <button class="pill" data-skill="VBA">VBA</button>
             </div>
           </div>
           <div class="skill-group reveal delay-2">
             <h3 class="sg-title">Frameworks &amp; Libraries</h3>
             <div class="sg-pills">
-              <span class="pill">React</span>
-              <span class="pill">React Native</span>
-              <span class="pill">Flask</span>
-              <span class="pill">Spring Boot</span>
-              <span class="pill">Node.js</span>
-              <span class="pill featured">Pydantic</span>
-              <span class="pill">Pandas</span>
-              <span class="pill">NumPy</span>
-              <span class="pill">Scikit-learn</span>
+              <button class="pill" data-skill="React">React</button>
+              <button class="pill" data-skill="React Native">React Native</button>
+              <button class="pill" data-skill="Flask">Flask</button>
+              <button class="pill" data-skill="Spring Boot">Spring Boot</button>
+              <button class="pill" data-skill="Node.js">Node.js</button>
+              <button class="pill featured" data-skill="Pydantic">Pydantic</button>
+              <button class="pill" data-skill="Pandas">Pandas</button>
+              <button class="pill" data-skill="NumPy">NumPy</button>
+              <button class="pill" data-skill="Scikit-learn">Scikit-learn</button>
             </div>
           </div>
           <div class="skill-group reveal delay-3">
             <h3 class="sg-title">Infrastructure</h3>
             <div class="sg-pills">
-              <span class="pill">Docker</span>
-              <span class="pill">Kubernetes</span>
-              <span class="pill featured">GitHub Actions</span>
-              <span class="pill">PostgreSQL</span>
-              <span class="pill">Nginx</span>
-              <span class="pill">SQLite</span>
+              <button class="pill" data-skill="Docker">Docker</button>
+              <button class="pill" data-skill="Kubernetes">Kubernetes</button>
+              <button class="pill featured" data-skill="GitHub Actions">GitHub Actions</button>
+              <button class="pill" data-skill="PostgreSQL">PostgreSQL</button>
+              <button class="pill" data-skill="Nginx">Nginx</button>
+              <button class="pill" data-skill="SQLite">SQLite</button>
             </div>
           </div>
           <div class="skill-group reveal delay-4">
             <h3 class="sg-title">Engineering practices</h3>
             <div class="sg-pills">
-              <span class="pill practice">TDD</span>
-              <span class="pill practice">Property-based testing</span>
-              <span class="pill practice">mypy</span>
-              <span class="pill practice">Ruff</span>
-              <span class="pill practice">REST / OpenAPI</span>
-              <span class="pill practice">Agile / Scrum</span>
-              <span class="pill practice">CI/CD</span>
+              <button class="pill practice" data-skill="TDD">TDD</button>
+              <button class="pill practice" data-skill="Property-based testing">Property-based testing</button>
+              <button class="pill practice" data-skill="mypy">mypy</button>
+              <button class="pill practice" data-skill="Ruff">Ruff</button>
+              <button class="pill practice" data-skill="REST / OpenAPI">REST / OpenAPI</button>
+              <button class="pill practice" data-skill="Agile / Scrum">Agile / Scrum</button>
+              <button class="pill practice" data-skill="CI/CD">CI/CD</button>
             </div>
           </div>
+
+          <!-- Skill dropdown panel -->
+          <div class="skill-panel" id="skillPanel">
+            <div class="skill-panel-header">
+              <div class="skill-panel-meta">
+                <span class="skill-panel-name" id="skillPanelName"></span>
+                <span class="skill-panel-count" id="skillPanelCount"></span>
+              </div>
+              <button class="skill-panel-close" id="skillPanelClose">&#x2715;</button>
+            </div>
+            <div class="skill-panel-cards" id="skillPanelCards"></div>
+          </div>
+
         </div>
       </div>
     </div>

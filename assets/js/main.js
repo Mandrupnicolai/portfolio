@@ -64,7 +64,7 @@ function openSkillPanel(skill, btn) {
   panelCount.textContent = matches.length + ' project' + (matches.length !== 1 ? 's' : '');
 
   if (matches.length === 0) {
-    panelCards.innerHTML = '<p class="sp-no-projects">No projects listed for this skill yet.</p>';
+    panelCards.innerHTML = '<p class="sp-no-projects">No public projects for this skill yet — but it\'s part of my technical toolkit.</p>';
   } else {
     panelCards.innerHTML = matches.map(p => {
       const otherTags = p.tags.filter(t => t !== skill).slice(0, 4).map(t => '<span class="sp-card-tag">' + t + '</span>').join('');

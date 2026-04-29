@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nicolai Uhre Mandrup — Software Engineer</title>
+  <meta name="description" content="Full-stack software engineer. MSc Software Engineering, Aalborg University. Copenhagen, Denmark." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Cabinet+Grotesk:wght@300;400;500;700&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">N·M</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="mailto:nicolai.uhre.com@gmail.com" class="nav-cta">Get in touch</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-layout">
+
+      <!-- Left: text -->
+      <div class="hero-left">
+        <div class="hero-availability fade-up">
+          <span class="avail-dot"></span>
+          Available for opportunities
+        </div>
+
+        <h1 class="hero-name fade-up delay-1">
+          Nicolai<br />
+          <em>Uhre</em><br />
+          Mandrup
+        </h1>
+
+        <div class="hero-divider fade-up delay-2"></div>
+
+        <p class="hero-descriptor fade-up delay-2">
+          Full-stack software engineer &amp;<br />
+          MSc candidate — Copenhagen
+        </p>
+
+        <p class="hero-sub fade-up delay-3">
+          I build production-grade software with deep care for architecture, testability, and the humans who maintain it.
+        </p>
+
+        <div class="hero-actions fade-up delay-4">
+          <a href="#projects" class="btn-primary">View my work</a>
+          <a href="https://github.com/Mandrupnicolai" target="_blank" rel="noopener" class="btn-text">
+            GitHub ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: floating code card -->
+      <div class="hero-right fade-up delay-2">
+        <div class="hero-card-wrap">
+          <div class="floating-card">
+            <div class="fc-header">
+              <div class="fc-dots">
+                <span class="fc-dot"></span><span class="fc-dot"></span><span class="fc-dot"></span>
+              </div>
+              <span class="fc-filename">quantforge / backtester.py</span>
+            </div>
+            <pre class="fc-code"><span class="ck">from</span> quantforge <span class="ck">import</span> Backtester, Portfolio
+<span class="ck">from</span> quantforge.strategies <span class="ck">import</span> SMACrossover
+
+strategy <span class="co">=</span> SMACrossover(
+    fast_window<span class="co">=</span><span class="cn">20</span>,
+    slow_window<span class="co">=</span><span class="cn">50</span>
+)
+
+result <span class="co">=</span> Backtester(
+    Portfolio(<span class="cn">100_000</span>), strategy
+).run(prices)
+
+<span class="cc"># Production-grade metrics</span>
+result.metrics.sharpe_ratio   <span class="cc"># → 1.47</span>
+result.metrics.max_drawdown   <span class="cc"># → -0.183</span>
+result.metrics.win_rate       <span class="cc"># → 0.54</span></pre>
+            <div class="fc-footer">
+              <span class="fc-badge green">89 tests passing</span>
+              <span class="fc-badge blue">CI · 3 OS</span>
+              <span class="fc-badge amber">mypy · ruff</span>
+            </div>
+          </div>
+          <!-- Decorative offset element -->
+          <div class="card-accent"></div>
+        </div>
+
+        <!-- Stats strip -->
+        <div class="hero-stats fade-up delay-5">
+          <div class="hstat">
+            <span class="hstat-n">89</span>
+            <span class="hstat-l">Tests written</span>
+          </div>
+          <div class="hstat-sep"></div>
+          <div class="hstat">
+            <span class="hstat-n">5+</span>
+            <span class="hstat-l">Production projects</span>
+          </div>
+          <div class="hstat-sep"></div>
+          <div class="hstat">
+            <span class="hstat-n">MSc</span>
+            <span class="hstat-l">Aalborg · 2026</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint fade-up delay-5">
+      <span class="scroll-line"></span>
+      <span class="scroll-label">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section class="section s-about" id="about">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-left reveal">
+          <p class="section-eyebrow">About</p>
+          <h2 class="section-heading">Built on quality.<br /><em>Driven by craft.</em></h2>
+        </div>
+        <div class="about-right reveal delay-1">
+          <p class="body-large">I'm a software engineer who cares about architecture, testability, and writing code that the next developer will actually enjoy reading.</p>
+          <p>My background spans Python backend systems, full-stack web applications, ML pipelines, and BI solutions — delivered across academic and professional settings. I've led platform migrations, built CI/CD pipelines from scratch, and written property-based test suites that explore thousands of edge cases automatically.</p>
+          <p>Currently completing my Master's in Software Engineering at Aalborg University, where I focus on software architecture, distributed systems, and applied ML.</p>
+
+          <div class="about-values">
+            <div class="value-row">
+              <span class="value-num">01</span>
+              <div>
+                <h3>Architecture first</h3>
+                <p>Clean separation of concerns and domain modelling before writing a single line of implementation.</p>
+              </div>
+            </div>
+            <div class="value-row">
+              <span class="value-num">02</span>
+              <div>
+                <h3>Test-driven rigour</h3>
+                <p>Unit, integration, and property-based tests. Type-safe with mypy. Linted with Ruff. CI on every push.</p>
+              </div>
+            </div>
+            <div class="value-row">
+              <span class="value-num">03</span>
+              <div>
+                <h3>Full-stack delivery</h3>
+                <p>Python to React, REST to Kubernetes — I own the full journey from architecture to deployment.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-contact">
+            <a href="mailto:nicolai.uhre.com@gmail.com" class="contact-line">nicolai.uhre.com@gmail.com</a>
+            <a href="https://linkedin.com/in/nicolai-uhre-mandrup-526288220" target="_blank" rel="noopener" class="contact-line">LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section class="section s-projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Selected work</p>
+        <h2 class="section-heading">Projects that<br /><em>demonstrate craft</em></h2>
+        <a href="https://github.com/Mandrupnicolai" target="_blank" rel="noopener" class="section-link">All repositories ↗</a>
+      </div>
+
+      <!-- Featured project -->
+      <a href="https://github.com/Mandrupnicolai/quantforge" target="_blank" rel="noopener" class="project-featured reveal">
+        <div class="pf-left">
+          <span class="pf-label">Featured</span>
+          <h3 class="pf-title">QuantForge</h3>
+          <p class="pf-desc">Production-grade algorithmic trading backtester. Immutable domain models via Pydantic v2, NumPy-vectorised simulation with look-ahead bias prevention, and a full analytics suite (Sharpe, VaR, CVaR, Calmar). 89 passing tests including Hypothesis property-based tests across Ubuntu, macOS, and Windows.</p>
+          <div class="pf-metrics">
+            <div class="pfm"><span class="pfm-n">89</span><span class="pfm-l">Tests</span></div>
+            <div class="pfm"><span class="pfm-n">1.47</span><span class="pfm-l">Sharpe</span></div>
+            <div class="pfm"><span class="pfm-n">3 OS</span><span class="pfm-l">CI platforms</span></div>
+          </div>
+          <div class="pf-tags">
+            <span class="tag">Python</span><span class="tag">Pydantic</span><span class="tag">NumPy</span><span class="tag">Hypothesis</span><span class="tag">GitHub Actions</span>
+          </div>
+          <span class="pf-arrow">View project ↗</span>
+        </div>
+        <div class="pf-right">
+          <div class="pf-visual">
+            <div class="pf-visual-inner">
+              <div class="chart-mock">
+                <svg viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#7C9A7E" stop-opacity="0.35"/>
+                      <stop offset="100%" stop-color="#7C9A7E" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,130 C20,125 40,118 60,105 C80,92 100,88 120,72 C140,56 160,60 180,48 C200,36 220,42 240,28 C260,14 280,18 320,10 L320,160 L0,160Z" fill="url(#cg)"/>
+                  <path d="M0,130 C20,125 40,118 60,105 C80,92 100,88 120,72 C140,56 160,60 180,48 C200,36 220,42 240,28 C260,14 280,18 320,10" fill="none" stroke="#7C9A7E" stroke-width="2.5"/>
+                  <line x1="0" y1="140" x2="320" y2="140" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                  <line x1="0" y1="100" x2="320" y2="100" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                  <line x1="0" y1="60" x2="320" y2="60" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                  <circle cx="240" cy="28" r="4" fill="#7C9A7E"/>
+                  <text x="248" y="24" fill="#7C9A7E" font-size="10" font-family="JetBrains Mono,monospace">+47%</text>
+                </svg>
+              </div>
+              <div class="pf-stat-cards">
+                <div class="pf-sc"><span class="pf-sc-v">1.47</span><span class="pf-sc-l">Sharpe ratio</span></div>
+                <div class="pf-sc"><span class="pf-sc-v">54%</span><span class="pf-sc-l">Win rate</span></div>
+                <div class="pf-sc"><span class="pf-sc-v">18.3%</span><span class="pf-sc-l">Max drawdown</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project grid -->
+      <div class="projects-grid">
+
+        <a href="https://github.com/Mandrupnicolai/text-to-sql-natural-language-interface" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="pc-top">
+            <h3>Text-to-SQL Interface</h3>
+            <span class="pc-arrow">↗</span>
+          </div>
+          <p>Browser-native NL-to-SQL engine. In-memory SQLite via WASM, OpenAI integration, query explain plans, CSV export — zero backend required.</p>
+          <div class="pc-tags">
+            <span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">SQLite WASM</span><span class="tag">OpenAI</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/Mandrupnicolai/home-network-vulnerability-scanner" target="_blank" rel="noopener" class="project-card reveal delay-1">
+          <div class="pc-top">
+            <h3>Network Vulnerability Scanner</h3>
+            <span class="pc-arrow">↗</span>
+          </div>
+          <p>LAN device discovery, TCP port scanning, banner grabbing and heuristic risk reporting. Web UI with Markdown + JSON output.</p>
+          <div class="pc-tags">
+            <span class="tag">Python</span><span class="tag">Security</span><span class="tag">HTML/CSS</span>
+          </div>
+        </a>
+
+        <div class="project-card reveal delay-2">
+          <div class="pc-top">
+            <h3>Hospital Navigation System</h3>
+          </div>
+          <p>Multi-tier backend with A* pathfinding for indoor routing. RESTful APIs, CI/CD, containerised deployment with full Typst documentation.</p>
+          <div class="pc-tags">
+            <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span>
+          </div>
+        </div>
+
+        <a href="https://github.com/blobod/Bachelor-Project" target="_blank" rel="noopener" class="project-card reveal">
+          <div class="pc-top">
+            <h3>AI Social Media Dashboard</h3>
+            <span class="pc-arrow">↗</span>
+          </div>
+          <p>Cross-platform mobile app with ML content recognition, real-time data visualisation, JWT auth, and Swagger-documented APIs.</p>
+          <div class="pc-tags">
+            <span class="tag">React Native</span><span class="tag">Flask</span><span class="tag">PostgreSQL</span><span class="tag">JWT</span>
+          </div>
+        </a>
+
+        <div class="project-card reveal delay-1">
+          <div class="pc-top">
+            <h3>Garbage Sorting ML Model</h3>
+          </div>
+          <p>ML classifier for automated waste sorting. Full data-cleaning pipeline, statistical modelling, Power BI dashboards for reporting.</p>
+          <div class="pc-tags">
+            <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Power BI</span>
+          </div>
+        </div>
+
+        <a href="https://github.com/Mandrupnicolai/agent-automating-workflow" target="_blank" rel="noopener" class="project-card reveal delay-2">
+          <div class="pc-top">
+            <h3>Agent Workflow Automation</h3>
+            <span class="pc-arrow">↗</span>
+          </div>
+          <p>Automated workflow orchestration using LLM agents. Demonstrates modern AI integration patterns and autonomous task execution.</p>
+          <div class="pc-tags">
+            <span class="tag">Python</span><span class="tag">LLM</span><span class="tag">Automation</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section class="section s-skills" id="skills">
+    <div class="container">
+      <div class="skills-layout">
+        <div class="skills-left reveal">
+          <p class="section-eyebrow">Technical stack</p>
+          <h2 class="section-heading">What I<br /><em>work with</em></h2>
+          <p class="skills-note">I prioritise depth over breadth — I'd rather know Python deeply than dabble in everything.</p>
+        </div>
+        <div class="skills-right">
+          <div class="skill-group reveal delay-1">
+            <h3 class="sg-title">Languages</h3>
+            <div class="sg-pills">
+              <span class="pill featured">Python</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">TypeScript</span>
+              <span class="pill">SQL</span>
+              <span class="pill">Java</span>
+              <span class="pill">VBA</span>
+            </div>
+          </div>
+          <div class="skill-group reveal delay-2">
+            <h3 class="sg-title">Frameworks &amp; Libraries</h3>
+            <div class="sg-pills">
+              <span class="pill">React</span>
+              <span class="pill">React Native</span>
+              <span class="pill">Flask</span>
+              <span class="pill">Spring Boot</span>
+              <span class="pill">Node.js</span>
+              <span class="pill featured">Pydantic</span>
+              <span class="pill">Pandas</span>
+              <span class="pill">NumPy</span>
+              <span class="pill">Scikit-learn</span>
+            </div>
+          </div>
+          <div class="skill-group reveal delay-3">
+            <h3 class="sg-title">Infrastructure</h3>
+            <div class="sg-pills">
+              <span class="pill">Docker</span>
+              <span class="pill">Kubernetes</span>
+              <span class="pill featured">GitHub Actions</span>
+              <span class="pill">PostgreSQL</span>
+              <span class="pill">Nginx</span>
+              <span class="pill">SQLite</span>
+            </div>
+          </div>
+          <div class="skill-group reveal delay-4">
+            <h3 class="sg-title">Engineering practices</h3>
+            <div class="sg-pills">
+              <span class="pill practice">TDD</span>
+              <span class="pill practice">Property-based testing</span>
+              <span class="pill practice">mypy</span>
+              <span class="pill practice">Ruff</span>
+              <span class="pill practice">REST / OpenAPI</span>
+              <span class="pill practice">Agile / Scrum</span>
+              <span class="pill practice">CI/CD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ─── -->
+  <section class="section s-experience" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Experience &amp; Education</p>
+        <h2 class="section-heading">Where I've<br /><em>worked &amp; studied</em></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-year">2024–25</div>
+          <div class="tl-content">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">Junior IT Consultant</h3>
+                <span class="tl-co">IDA Insurance · Copenhagen</span>
+              </div>
+              <span class="tl-type work">Work</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Built and maintained Power BI dashboards for member analytics and evaluation outcomes</li>
+              <li>Automated reporting pipelines using Excel VBA and Microsoft 365, reducing manual workload</li>
+              <li>Led platform migration — evaluating architecture and optimising the new database structure</li>
+              <li>Delivered ad hoc IT maintenance and digital tool improvements across member systems</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tag">Power BI</span><span class="tag">Excel VBA</span><span class="tag">Database design</span><span class="tag">Microsoft 365</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal delay-1">
+          <div class="tl-year">2024–26</div>
+          <div class="tl-content">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">MSc Software Engineering</h3>
+                <span class="tl-co">Aalborg University · Copenhagen Campus</span>
+              </div>
+              <span class="tl-type edu">Education</span>
+            </div>
+            <p class="tl-desc">Software architecture, distributed systems, applied ML, and advanced engineering practices. Expected graduation 2026.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal delay-2">
+          <div class="tl-year">2020–23</div>
+          <div class="tl-content">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-role">BSc Software Development</h3>
+                <span class="tl-co">Aalborg University · Copenhagen Campus</span>
+              </div>
+              <span class="tl-type edu">Education</span>
+            </div>
+            <p class="tl-desc">Foundations in algorithms, data structures, software engineering, and full-stack development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section class="section s-contact" id="contact">
+    <div class="container">
+      <div class="contact-layout reveal">
+        <div class="contact-left">
+          <p class="section-eyebrow light">Let's connect</p>
+          <h2 class="contact-heading">Open to<br /><em>the right role.</em></h2>
+          <p class="contact-sub">I'm looking for graduate positions in full-stack, backend, or data-intensive engineering. Based in Copenhagen — open to hybrid or remote.</p>
+        </div>
+        <div class="contact-right">
+          <div class="contact-card">
+            <div class="cc-row">
+              <span class="cc-label">Email</span>
+              <a href="mailto:nicolai.uhre.com@gmail.com" class="cc-value">nicolai.uhre.com@gmail.com</a>
+            </div>
+            <div class="cc-row">
+              <span class="cc-label">Phone</span>
+              <a href="tel:+4560788353" class="cc-value">+45 60 78 83 53</a>
+            </div>
+            <div class="cc-row">
+              <span class="cc-label">Location</span>
+              <span class="cc-value">Copenhagen, Denmark</span>
+            </div>
+            <div class="cc-row">
+              <span class="cc-label">GitHub</span>
+              <a href="https://github.com/Mandrupnicolai" target="_blank" rel="noopener" class="cc-value">github.com/Mandrupnicolai</a>
+            </div>
+            <div class="cc-row">
+              <span class="cc-label">LinkedIn</span>
+              <a href="https://linkedin.com/in/nicolai-uhre-mandrup-526288220" target="_blank" rel="noopener" class="cc-value">in/nicolai-uhre-mandrup</a>
+            </div>
+            <div class="cc-actions">
+              <a href="mailto:nicolai.uhre.com@gmail.com" class="btn-dark">Send an email ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-name">Nicolai Uhre Mandrup</span>
+        <span class="footer-loc">Copenhagen · Denmark</span>
+        <div class="footer-links">
+          <a href="https://github.com/Mandrupnicolai" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://linkedin.com/in/nicolai-uhre-mandrup-526288220" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
